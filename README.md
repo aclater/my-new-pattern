@@ -17,7 +17,7 @@ You need an OpenShift 4 cluster, a kubeconfig logged in to it as a cluster admin
 
 1. Get the pattern and create the secrets file it loads into the vault:
 
-   ```
+   ```sh
    git clone https://github.com/aclater/my-new-pattern.git
    cd my-new-pattern
    cp values-secret.yaml.template ~/values-secret.yaml
@@ -25,13 +25,13 @@ You need an OpenShift 4 cluster, a kubeconfig logged in to it as a cluster admin
 
 2. Render what will be installed, without touching a cluster:
 
-   ```
+   ```sh
    ./pattern.sh make show
    ```
 
 3. Install the pattern on the cluster your kubeconfig points at:
 
-   ```
+   ```sh
    ./pattern.sh make install
    ```
 
